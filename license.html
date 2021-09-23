@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>license</title>
+    <link rel="stylesheet" href="styles/license.css">
+</head>
+<body>
+<div id="1">
+    <h2>1. 필요성</h2>
+    <p> IntelliJ는 2가지의  버전이 있다. Community 버전의 경우 프로파일링 도구나 데이터베이스 도구 등의 지원을 받지 못한다. </p>
+    <p>기능이 다양한 Ultimate 버전을 사용하려면 라이센스가 필요하다.</p>
+    <p>아래는 Community 버전과 Ultimate 버전을 비교해놓은 표이다.</p>
+    <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcMHxXh%2FbtqCpPQhcpE%2FQC8SZlKb9IR8Z8HwHz7nbk%2Fimg.png" />
+    <p>이러한 Ultimate 버전은 학생 인증을 통해 무료로 사용이 가능하다.</p>
+</div>
+
+<div id="2">
+    <h2>2. 학생인증방법</h2>
+    <p>우선 JetBrains 학생인증 사이트에 접속한다.</p>
+    <br>
+    <a href="http://www.jetbrains.com/community/education/#students" target="_blank">사이트 바로가기</a>
+    <p>진행하다보면 이메일 주소를 넣는 부분이 있다.</p>
+    <strong class="redStrong">* 중요</strong>
+    <p>이 부분은 제주대학교 포털에서 구글메일을 통해 학교메일을 생성할 수 있다. 아래와 같이 발급받은 이메일 주소를 입력해준다.</p>
+    이메일 주소:       <input type="text" value="*****@stu.jejunu.ac.kr" readonly>
+    <p>발송된 이메일을 통해 계정이 없는 경우 회원가입을 진행한다.</p>
+</div>
+
+<div id="3">
+    <h2>3. 최종 실행 및 인증</h2>
+    <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FPntfc%2FbtqCsHDKhje%2FWljrxiAfWq1TcX4UDAvX2k%2Fimg.png" />
+    <p>회원가입이 완료되었다면 자신의 OS에 맞는 Ultimate 버전을 다운받는다.</p>
+    <br>
+    <p>다음은 설치 후 나오는 화면이다.</p>
+    <p>가입한 이메일과 비밀번호를 입력하여 설치를 마무리한다.</p>
+    <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fbq8REM%2FbtqCtXlWNdQ%2FS1SskYaPW2bEsBHGDOd4G0%2Fimg.png" />
+    <p>사진 및 정보 출처 : https://goddaehee.tistory.com/215</p>
+</div>
+
+<div id=buttonBar>
+    <button type="button" id="prevBt" onclick="prevPage()">이전</button>
+    <button type="button" id="nextBt" onclick="nextPage()">다음</button>
+    <input type="hidden" id="page" value="1" />
+</div>
+
+<script type="text/javascript">
+    let page = parseInt(document.getElementById('page').value);
+
+    function nextPage(){
+        page += 1;
+        document.getElementById('page').value = page.toString();
+        if(page == 2){
+            document.getElementById("1").style.display = "none";
+            document.getElementById("2").style.display = "block";
+            document.getElementById("3").style.display = "none";
+            document.getElementById("prevBt").style.display = "block";
+        } else if(page == 3){
+            document.getElementById("1").style.display = "none";
+            document.getElementById("2").style.display = "none";
+            document.getElementById("3").style.display = "block";
+            document.getElementById("nextBt").style.display = "none";
+        }
+    };
+
+    function prevPage(){
+        page -= 1;
+        document.getElementById('page').value = page.toString();
+        if(page == 1){
+            document.getElementById("1").style.display = "block";
+            document.getElementById("2").style.display = "none";
+            document.getElementById("3").style.display = "none";
+            document.getElementById("prevBt").style.display = "none";
+        } else if(page == 2){
+            document.getElementById("1").style.display = "none";
+            document.getElementById("2").style.display = "block";
+            document.getElementById("3").style.display = "none";
+            document.getElementById("nextBt").style.display = "block";
+        }
+    };
+</script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+@import "common.css";
+#2, #3, #prevBt {
+    display: none;
+}
+#buttonBar {
+    display: flex
+}
+.redStrong {
+    color : red;
+}
