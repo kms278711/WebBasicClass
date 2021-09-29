@@ -1,8 +1,8 @@
 @import "common.css";
-#2, #3, #prevBt {
+.second, .third, .prevBt {
     display: none;
 }
-#buttonBar {
+.buttonBar {
     display: flex
 }
 .redStrong {
