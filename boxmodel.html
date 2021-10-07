@@ -1,10 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>box model</title>
+    <style>
+        .box {
+            box-sizing: border-box;
+            border: 1px solid red;
+            width: 100px;
+            height: 100px;
+            padding: 10px;
+            maring: 10px 5px 1px;
+        }
+        .span-box {
+            display: block;
+            border: 2px solid blue;
+            /*width: 100px;*/
+            /*height: 100px;*/
+            padding: 10px;
+            maring: 10px;
+        }
+    </style>
 </head>
 <body>
-$END$
+<div class="box">box</div>
+<span class="span-box">span box</span>
 </body>
 </html>
