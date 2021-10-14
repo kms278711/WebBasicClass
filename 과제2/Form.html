@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+    <style>
+        textarea {
+            width: 800px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>프론트엔드 개발자 지원서</h1>
+</header>
+<main>
+    <span>HTML, CSS, JAVASCRIPT에 대한 기술적 이해가 많은 경험이 있는분을 찾습니다.</span>
+    <hr>
+    <form>
+        <fieldset>
+            <legend>입사지원서</legend>
+            <h2>개인정보</h2>
+            <ul>
+                <li>이름 <input type="text" name="name"></li>
+                <li>연락처 <input type="text" name="tel"></li>
+                <li>학과 <select name="major"><option>컴퓨터 공학과</option></select></li>
+            </ul>
+
+            <h2>지원 분야</h2>
+            <ul>
+                <li><input type="radio" name="web_publish"> 웹 퍼블리싱</li>
+                <li><input type="radio" name="web_app"> 웹 어플리케이션</li>
+                <li><input type="radio" name="web_sup"> 웹 개발지원</li>
+            </ul>
+
+            <h2>지원 동기</h2>
+            <textarea placeholder="지원동기를 작성해주세요."></textarea><br>
+            <input type="button" name="submit" value="접수하기"> <input type="button" name="re-write" value="다시작성">
+        </fieldset>
+    </form>
+</main>
+
+
+
+
+</body>
+</html>
